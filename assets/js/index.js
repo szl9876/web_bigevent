@@ -29,7 +29,7 @@ function getuserInfo() {
         //     Authorization: localStorage.getItem('token') || ''
         // },
         success: function (res) {
-            // console.log(res);
+            console.log(res);
             if (res.status !== 0) {
                 return layui.layer.msg('获取用户信息失败！')
             }
@@ -62,7 +62,7 @@ function renderAvator(user) {
     //3.按需渲染图片的头像
     if (user.user_pic !== null) {
         //3.1渲染图片头像
-        $('.layui-nav-img').attr('src', user.src).show()
+        $('.layui-nav-img').attr('src', user.user_pic).show()
         $('.text-avatar').hide()
     } else {
         // 3.2渲染文字头像
